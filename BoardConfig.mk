@@ -78,6 +78,9 @@ BOARD_USES_LEGACY_MMAP := true
 # GPS
 BOARD_HAVE_NEW_QC_GPS := true
 
+# Disable block based OTA
+TARGET_USES_BLOCK_BASED_OTA := false
+
 TARGET_SPECIFIC_HEADER_PATH += device/sony/taoshan/include
 
 BOARD_RIL_NO_CELLINFOLIST := true
@@ -151,30 +154,3 @@ TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
 
 TARGET_USES_LOGD := false
-
-BOARD_SEPOLICY_DIRS += \
-    device/sony/taoshan/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    file_contexts \
-    app.te \
-    bluetooth.te \
-    device.te \
-    domain.te \
-    drmserver.te \
-    file.te \
-    hci_init.te \
-    healthd.te \
-    init.te \
-    init_shell.te \
-    keystore.te \
-    kickstart.te \
-    mediaserver.te \
-    netd.te \
-    property.te \
-    property_contexts \
-    rild.te \
-    surfaceflinger.te \
-    system_server.te \
-    ueventd.te \
-    wpa_supplicant.te
