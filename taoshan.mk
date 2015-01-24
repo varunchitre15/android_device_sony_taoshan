@@ -209,6 +209,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence \
     lpa.decode=false
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
+
 # GPS-2
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qmienabled=true \
